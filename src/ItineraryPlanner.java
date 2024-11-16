@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
     class ItineraryPlanner {
-        private List<Destination> destinations;
+        private final List<Destination> destinations;
 
         public ItineraryPlanner() {
             destinations = new ArrayList<>();
@@ -28,7 +28,7 @@ import java.util.List;
         public double calculateTotalBudget() {
             double totalBudget = 0;
             for (Destination dest : destinations) {
-                totalBudget += dest.getBudget();
+                totalBudget += dest.budget();
             }
             return totalBudget;
         }
